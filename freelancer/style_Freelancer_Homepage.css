@@ -1,0 +1,155 @@
+:root {
+    --primary-color: #FF5722;
+    --secondary-color: #ffffff;
+    --background-color: #f2f2f2;
+    --text-color: #333333;
+    --muted-text-color: #777777;
+    --highlight-color: #ff9900;
+    --border-radius: 8px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.navbar {
+    background-color: var(--primary-color);
+    padding: 1rem;
+}
+
+.navbar-brand, .nav-link {
+    color: var(--secondary-color) !important;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--highlight-color) !important;
+}
+
+label.logo {
+    color: var(--secondary-color);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li a {
+    color: var(--secondary-color);
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: var(--highlight-color);
+}
+
+.banner {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 4rem 2rem;
+    text-align: center;
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: var(--text-color);
+    border-bottom: 2px solid var(--text-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.mi{
+    font-weight: bold;
+}
+
+.container-fluid {
+    display: flex;
+    margin: 2rem 0;
+    padding: 0 2rem;
+}
+
+.filter-section {
+    flex: 1;
+    padding-right: 2rem;
+    border-right: 1px solid var(--muted-text-color);
+}
+
+.job-listings-section {
+    flex: 2;
+    padding-left: 2rem;
+}
+
+.job-listing {
+    background-color: var(--secondary-color);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-listing:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 0.875rem;
+    margin-top: 2rem;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container-fluid {
+        flex-direction: column;
+    }
+    .filter-section, .job-listings-section {
+        padding: 1rem;
+    }
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: var(--border-radius);
+    color: var(--secondary-color);
+}
+
+.btn-primary:hover {
+    background-color: #fc3b00; /* Darker shade of orange for hover effect */
+}
+
+/* Additional styling for alerts within job listings */
+.job-listing .alert {
+    margin-top: 1rem;
+}

@@ -1,0 +1,201 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Christian Robertson', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Diagonal Background */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ff6600 50%, #ffffff 50%);
+    z-index: -1;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.buttons {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex; /* Align buttons in a row */
+    gap: 20px; /* Space between buttons */
+    align-items: center; /* Center buttons vertically */
+}
+
+.btn {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    display: flex; /* Ensure the link behaves like a button */
+    align-items: center;
+    justify-content: center;
+}
+
+.hire {
+    background-color: #ffffff;
+    color: #ff6600;
+    border: 2px solid #ff6600;
+}
+
+.get-hired {
+    background-color: #ffffff;
+    color: #ff6600;
+    border: 2px solid #ff6600;
+}
+
+.hire:hover, .get-hired:hover {
+    background-color: #ff6600;
+    color: #ffffff;
+    opacity: 0.9;
+}
+
+.animation {
+    position: absolute;
+    right: 0;
+    width: 50vw; /* Cover half of the viewport width */
+    height: 50vh; /* Cover half of the viewport height */
+    overflow: hidden;
+}
+
+.splash-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.splash-ball {
+    width: 80px; /* Smaller ball size */
+    height: 80px;
+    background-color: #ff6600;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: move-round 3s linear infinite, burst 4s ease-in-out forwards;
+}
+
+.sparkle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff; /* White sparkles */
+    border-radius: 50%;
+    opacity: 0;
+    animation: sparkle 4s ease-in-out forwards;
+}
+
+.sparkle1 {
+    top: 20%;
+    left: 20%;
+    animation-delay: 3s;
+}
+
+.sparkle2 {
+    top: 20%;
+    right: 20%;
+    animation-delay: 3.2s;
+}
+
+.sparkle3 {
+    bottom: 20%;
+    left: 20%;
+    animation-delay: 3.4s;
+}
+
+.sparkle4 {
+    bottom: 20%;
+    right: 20%;
+    animation-delay: 3.6s;
+}
+
+.sparkle5 {
+    top: 50%;
+    left: 50%;
+    animation-delay: 3.8s;
+}
+
+.welcome-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    font-weight: 700;
+    color: #ff6600;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0; /* Initially hidden */
+    animation: reveal 1s ease-in-out 4s forwards; /* Start revealing after the burst */
+}
+
+@keyframes move-round {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes burst {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    90% {
+        transform: translate(-50%, -50%) scale(2.5);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+}
+
+@keyframes reveal {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@keyframes sparkle {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}

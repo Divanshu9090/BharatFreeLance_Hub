@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelancer Pricing</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-orange">
+        <a class="navbar-brand" href="#">BharatFreeLance Hub</a>
+        <!-- Rest of the Navbar content -->
+    </nav>
+
+    <div class="container mt-5">
+        <h2 class="text-center">Freelancer Pricing</h2>
+        
+        <div class="row">
+            <!-- Hourly Rate Section -->
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Hourly Rate</h5>
+                        <p id="hourly-rate-text" class="card-text">$0/hour</p>
+                        <input type="number" id="hours" class="form-control" placeholder="Enter hours worked" min="0">
+                        <p class="mt-3">Total: $<span id="total-price">0</span></p>
+                        <button id="pay-hourly" class="btn btn-success">Pay</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project Rate Section -->
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Project Rate</h5>
+                        <p id="project-rate-text" class="card-text">Starting at $0/project</p>
+                        <button id="pay-project" class="btn btn-success">Pay</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2023 BharatFreeLance Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js" type="module"></script>
+</body>
+</html>
