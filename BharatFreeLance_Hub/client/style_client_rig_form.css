@@ -1,0 +1,239 @@
+:root {
+    --primary-color: #FF5722; /* Orange color */
+    --secondary-color: #FFFFFF; /* White */
+    --background-color: #F2F2F2; /* Light gray background */
+    --text-color: #333333; /* Dark gray text */
+    --muted-text-color: #777777; /* Muted gray text */
+    --highlight-color: #FF9800; /* Highlight orange color */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between logo and text */
+}
+
+.logo {
+    max-width: 100px;
+    height: auto;
+    margin-left: 20px; /* Margin to the left of the logo */
+}
+
+.header-text {
+    text-align: center; /* Center align the text */
+    flex: 1; /* Take up remaining space */
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.header-text h3 {
+    margin: 0.5rem 0 0 0;
+    font-size: 1.25rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.form-container {
+    max-width: 800px;
+    width: 100%;
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    background-color: var(--secondary-color);
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+legend {
+    font-weight: bold;
+    font-size: 1.125rem;
+}
+
+label {
+    display: block;
+    margin: 0.5rem 0;
+}
+
+h2 {
+    color: var(--text-color);
+    border-bottom: 2px solid var(--text-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 3rem;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="tel"],
+input[type="url"],
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.radio-group {
+    margin: 0.5rem 0;
+}
+
+.radio-group label {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 1rem auto; /* Center the button horizontally */
+}
+
+button:hover {
+    background-color: var(--highlight-color);
+}
+
+.warning {
+    color: red;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+.error {
+    color: red;
+    font-size: 0.875rem;
+}
+
+.footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.footer a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.image-upload {
+    text-align: center; /* Center the upload area */
+    margin-bottom: 2rem; /* Space between the image upload and the rest of the form */
+}
+
+.image-upload-label {
+    display: inline-block; /* Make the label inline block to center it */
+    padding: 10px;
+    border: 2px dashed #ccc; /* Dashed border to indicate where to drop the image */
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: var(--secondary-color);
+}
+
+.image-upload-label span {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+#profileImage {
+    display: none; /* Hide the default file input */
+}
+
+.upload-status {
+    margin-top: 10px;
+    font-size: 16px;
+}
+.image-preview {
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.image-preview img {
+    max-width: 200px; /* Limit the size of the preview image */
+    max-height: 200px; /* Limit the size of the preview image */
+    border: 1px solid #ddd; /* Border around the preview image */
+    border-radius: 4px; /* Rounded corners */
+}
+
+/* Initially hide the Change Image button */
+.hidden {
+    display: none;
+}
+
+/* Hide the upload section after an image is uploaded */
+#uploadSection.hidden {
+    display: none;
+}
+
+#changeImageButton {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+#changeImageButton:hover {
+    background-color: var(--highlight-color);
+}
+
+.option{
+    text-align: center;
+    display: block; /* Ensures the label is treated as a block element */
+    width: 100%; /* Adjust as necessary */
+}
